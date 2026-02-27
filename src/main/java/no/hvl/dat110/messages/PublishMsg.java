@@ -3,18 +3,34 @@ package no.hvl.dat110.messages;
 import no.hvl.dat110.common.TODO;
 
 public class PublishMsg extends Message {
-	
+	private String topic;
+	private String message;
 	// message sent from client to create publish a message on a topic 
 
-	public PublishMsg(String user, String topic, String message) {
-
+	public String getTopic() {
+		return topic;
 	}
 
-	// TODO:
-	// Implement object variables - a topic and a message is required
+	public void setTopic(String topic) {
+		this.topic = topic;
+	}
 
-	// Complete the constructor, get/set-methods, and toString method
-	// as described in the project text
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	@Override
+	public String toString() {
+		return "PublishMsg [topic=" + topic + ", message=" + message + ", getMessage()=" + getMessage() + ", getType()="
+				+ getType() + ", getUser()=" + getUser() + ", toString()=" + super.toString()  + "]";
+	}
+
+	public PublishMsg(String user, String topic, String message) {
+		super(MessageType.PUBLISH, user);
+		this.message=message;
+		this.topic=topic;
+	}
+
 	
 	public String getMessage() {
 		
