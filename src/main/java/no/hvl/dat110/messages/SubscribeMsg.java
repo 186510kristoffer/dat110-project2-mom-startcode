@@ -10,11 +10,10 @@ public class SubscribeMsg extends Message {
 
     }
 
-	@Override
-	public String toString() {
-		return "SubscribeMsg [topic=" + topic + ", getTopic()=" + getTopic() + ", getType()=" + getType()
-				+ ", getUser()=" + getUser() + ", toString()=" + super.toString() + "]";
-	}
+    @Override
+    public String toString() {
+        return "SubscribeMsg [topic=" + topic + "] " + super.toString();
+    }
 
 	public String getTopic() {
 		return topic;
@@ -23,11 +22,5 @@ public class SubscribeMsg extends Message {
 	public void setTopic(String topic) {
 		this.topic = topic;
 	}
-
-	// TODO:
-	// Implement object variables - a topic is required
-
-	// Complete the constructor, get/set-methods, and toString method
-	// as described in the project text
 		
 }

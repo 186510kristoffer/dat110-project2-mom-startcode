@@ -21,15 +21,6 @@ public class CreateTopicMsg extends Message {
 
 	@Override
 	public String toString() {
-		return "CreateTopicMsg [topic=" + topic + ", getTopic()=" + getTopic() + ", getType()=" + getType()
-				+ ", getUser()=" + getUser() + ", toString()=" + super.toString() +  "]";
+	    return "CreateTopicMsg [topic=" + topic + "] " + super.toString();
 	}
-
-	
-
-	// TODO: 
-	// Implement object variables - a topic is required
-	
-	// Complete the constructor, get/set-methods, and toString method
-    // as described in the project text	
 }

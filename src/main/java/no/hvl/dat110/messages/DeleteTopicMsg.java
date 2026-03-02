@@ -9,11 +9,10 @@ public class DeleteTopicMsg extends Message {
     	this.topic=topic;
     }
 
-	@Override
-	public String toString() {
-		return "DeleteTopicMsg [topic=" + topic + ", getTopic()=" + getTopic() + ", getType()=" + getType()
-				+ ", getUser()=" + getUser() + ", toString()=" + super.toString() + "]";
-	}
+    @Override
+    public String toString() {
+        return "DeleteTopicMsg [topic=" + topic + "] " + super.toString();
+    }
 
 	public String getTopic() {
 		return topic;
@@ -22,11 +21,5 @@ public class DeleteTopicMsg extends Message {
 	public void setTopic(String topic) {
 		this.topic = topic;
 	}
-
-	// TODO:
-	// Implement object variables - a topic is required
-
-	// Complete the constructor, get/set-methods, and toString method
-	// as described in the project text
 
 }

@@ -9,11 +9,10 @@ public class UnsubscribeMsg extends Message {
     	this.topic= topic;	
     }
 
-	@Override
-	public String toString() {
-		return "UnsubscribeMsg [topic=" + topic + ", getTopic()=" + getTopic() + ", getType()=" + getType()
-				+ ", getUser()=" + getUser() + ", toString()=" + super.toString() +  "]";
-	}
+    @Override
+    public String toString() {
+        return "UnsubscribeMsg [topic=" + topic + "] " + super.toString();
+    }
 
 	public String getTopic() {
 		return topic;
@@ -23,10 +22,4 @@ public class UnsubscribeMsg extends Message {
 		this.topic = topic;
 	}
 
-	// TODO:
-	// Implement object variables - a topic is required
-
-	// Complete the constructor, get/set-methods, and toString method
-	// as described in the project text
-	
 }

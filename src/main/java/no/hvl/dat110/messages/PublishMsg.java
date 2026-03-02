@@ -21,8 +21,7 @@ public class PublishMsg extends Message {
 
 	@Override
 	public String toString() {
-		return "PublishMsg [topic=" + topic + ", message=" + message + ", getMessage()=" + getMessage() + ", getType()="
-				+ getType() + ", getUser()=" + getUser() + ", toString()=" + super.toString()  + "]";
+	    return "PublishMsg [topic=" + topic + ", message=" + message + "] " + super.toString();
 	}
 
 	public PublishMsg(String user, String topic, String message) {
@@ -34,6 +33,6 @@ public class PublishMsg extends Message {
 	
 	public String getMessage() {
 		
-		throw new UnsupportedOperationException(TODO.method());
+		return message;
 	}
 }
