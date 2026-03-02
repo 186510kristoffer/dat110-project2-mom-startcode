@@ -16,6 +16,10 @@ public class TemperatureDevice {
 		client.connect();
 		for(int i=0; i<COUNT;i++) {
 			client.publish(Common.TEMPTOPIC, sn.read()+"");
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+			}
 		}
 		client.disconnect();
 

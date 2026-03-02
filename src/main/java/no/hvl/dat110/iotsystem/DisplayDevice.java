@@ -3,6 +3,7 @@ package no.hvl.dat110.iotsystem;
 import no.hvl.dat110.client.Client;
 import no.hvl.dat110.messages.Message;
 import no.hvl.dat110.messages.PublishMsg;
+import no.hvl.dat110.common.Logger;
 import no.hvl.dat110.common.TODO;
 
 public class DisplayDevice {
@@ -18,7 +19,9 @@ public class DisplayDevice {
 		client.createTopic(Common.TEMPTOPIC);
 		client.subscribe(Common.TEMPTOPIC);
 		for(int i=0; i<COUNT;i++) {
-			client.receive();
+			Message msg=client.receive();
+			Logger.log(""+msg);
+			
 		}
 		client.unsubscribe(Common.TEMPTOPIC);
 		client.disconnect();
